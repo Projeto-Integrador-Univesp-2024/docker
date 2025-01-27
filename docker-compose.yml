@@ -1,44 +1,42 @@
-version: '3.7'
-
 services:
-    api:
-        build:
-            dockerfile: dockerfile
-            context: ../backend
-            target: ${NODE_ENV:-development}
-        volumes:
-            - ../backend:/usr/src/app
-            - /usr/src/app/node_modules
-        command: npm run start:dev
-        depends_on:
-            - db
-        ports:
-            - 5000:3000
-            - 9229:9229
-        env_file:
-            - ../backend/.env
-        networks:
-            - webnet
-        restart: unless-stopped
+    # api:
+    #     build:
+    #         dockerfile: dockerfile
+    #         context: ../backend
+    #         target: ${NODE_ENV:-development}
+    #     volumes:
+    #         - ../backend:/usr/src/app
+    #         - /usr/src/app/node_modules
+    #     command: npm run start:dev
+    #     depends_on:
+    #         - db
+    #     ports:
+    #         - 5000:3000
+    #         - 9229:9229
+    #     env_file:
+    #         - ../backend/.env
+    #     networks:
+    #         - webnet
+    #     restart: unless-stopped
     
-    web:
-        build:
-            dockerfile: dockerfile
-            context: ../frontend
-            target: ${NODE_ENV:-development}
-        volumes:
-            - ../frontend:/usr/src/app
-            - /usr/src/app/node_modules
-        command: npm run dev
-        depends_on:
-            - api
-        ports:
-            - 3000:3000
-        env_file:
-            - ../frontend/.env
-        networks:
-            - webnet
-        restart: unless-stopped
+    # web:
+    #     build:
+    #         dockerfile: dockerfile
+    #         context: ../client
+    #         target: ${NODE_ENV:-development}
+    #     volumes:
+    #         - ../client:/usr/src/app
+    #         - /usr/src/app/node_modules
+    #     command: npm run dev
+    #     depends_on:
+    #         - api
+    #     ports:
+    #         - 3000:3000
+    #     env_file:
+    #         - ../client/.env
+    #     networks:
+    #         - webnet
+    #     restart: unless-stopped
 
     db:
         image: postgres

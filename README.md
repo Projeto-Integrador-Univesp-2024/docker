@@ -1,59 +1,99 @@
-# Despertando Mentes Jovens: Jornada na Educação Financeira Infantil
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Projeto-Integrador-Univesp-2024_docker&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Projeto-Integrador-Univesp-2024_docker)
+# **Documentação do Docker**
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Projeto-Integrador-Univesp-2024/docker?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/Projeto-Integrador-Univesp-2024/docker?style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/Projeto-Integrador-Univesp-2024/docker?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/Projeto-Integrador-Univesp-2024/docker?style=for-the-badge)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Projeto-Integrador-Univesp-2024/docker?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/Projeto-Integrador-Univesp-2024/docker?style=for-the-badge)
+Bem-vindo à documentação oficial do projeto **Jornada na Educação Financeira Infantil**. 
+Este documento descreve os pré-requisitos, etapas de instalação, e como executar o ambiente utilizando Docker.
 
-> O projeto em questão é uma proposta a introdução de um inovador aplicativo de educação financeira voltado para crianças.
+---
 
-## 💻 Pré-requisitos
+## **1. Visão Geral**
+O projeto tem como objetivo criar um aplicativo inovador de educação financeira para crianças, com o backend, frontend e banco de dados integrados por meio de contêineres Docker.
 
-Antes de começar, tenha certeza que você tem os requisitos abaixo:
+### **1.1 Tecnologias Utilizadas**
+- Docker
+- Docker Compose
 
-- Você tem o [git](https://git-scm.com) instalado na sua máquina.
-- Você tem o [npm](https://www.npmjs.com) ou o [yarn](https://yarnpkg.com) instalado na sua máquina.
-- Você tem instalado o [Docker](https://www.docker.com).
+---
 
-Opcional e Detalhes
+## **2. Pré-requisitos**
+Antes de começar, certifique-se de que o ambiente atende aos seguintes pré-requisitos:
 
-- Para instalar o yarn, primeiro você precisa ter o [npm](https://www.npmjs.com) instalado, e então instale com o comando `npm install --global yarn`
+- Git: [Instale o Git](https://git-scm.com/).
+- Node.js/NPM ou Yarn: [Instale o Node.js e NPM](https://nodejs.org/) ou [Yarn](https://yarnpkg.com/).
+- Docker: [Instale o Docker](https://www.docker.com/).
+- Docker Compose: Incluído no Docker Desktop ou instale separadamente.
 
-## 🚀 Instalando Despertando Mentes Jovens
-
-Para instalar o Despertando Mentes Jovens, siga os passos abaixo:
-
-- Primeiro abra seu terminal e crie uma pasta onde irá colocar os arquivos de código usando o comando `mkdir [NOME_DA_PASTA]`
-
-- Após criar a pasta, entre dentro dela usando o comando `cd [NOME_DA_PASTA]`
-
-- Dentro da pasta, clone os projetos:
-  - [Docker](https://github.com/Projeto-Integrador-Univesp-2024/docker)
-  - [Backend](https://github.com/Projeto-Integrador-Univesp-2024/backend)
-  - [Frontend](https://github.com/Projeto-Integrador-Univesp-2024/frontend)
-
-- Para clonar o Docker:
- HTTP: `git clone https://github.com/Projeto-Integrador-Univesp-2024/docker.git`
- or
- SSH: `git clone git@github.com:Projeto-Integrador-Univesp-2024/docker.git`
-
-- Para clonar o Backend:
- HTTP: `git clone https://github.com/Projeto-Integrador-Univesp-2024/backend.git`
- or
- SSH: `git clone git@github.com:Projeto-Integrador-Univesp-2024/backend.git`
-
-- Para clonar o Frontend:
- HTTP: `git clone https://github.com/Projeto-Integrador-Univesp-2024/frontend.git`
- or
- SSH: `git clone git@github.com:Projeto-Integrador-Univesp-2024/frontend.git`
-
-### Para rodar a aplicação
-
-- Após clonar todos os projetos, navegue até `cd docker` e rode o comando:
+### **2.1 Requisitos Opcionais**
 ```bash
-docker compose up --build -d
+	npm install --global yarn
 ```
+
+---
+
+## **3. Estrutura do Projeto**
+
+O projeto é dividido em três principais repositórios:
+
+-   **Docker**: Configuração de contêineres e orquestração.
+-   **Backend**: API do sistema.
+-   **Frontend**: Interface do usuário.
+
+---
+
+## **4. Instalação**
+
+
+Siga as etapas abaixo para clonar os repositórios e configurar o ambiente:
+
+### **4.1. Criar um Diretório**
+
+Abra o terminal e crie um diretório para os arquivos do projeto:
+```bash
+	mkdir [NOME_DA_PASTA]
+	cd [NOME_DA_PASTA]
+```
+
+### **4.2. Clonar os Repositórios**
+Clone os repositórios usando **HTTP** ou **SSH**:
+-   **Docker**:
+    ```bash
+	    git clone https://github.com/Projeto-Integrador-Univesp-2024/docker.git
+	    # ou via SSH
+	    git clone git@github.com:Projeto-Integrador-Univesp-2024/docker.git
+    ```
+-   **Backend**:
+    ```bash
+	    git clone https://github.com/Projeto-Integrador-Univesp-2024/backend.git
+	    # ou via SSH
+	    git clone git@github.com:Projeto-Integrador-Univesp-2024/backend.git
+    ``` 
+-   **Frontend**:
+    ```bash
+	    git clone https://github.com/Projeto-Integrador-Univesp-2024/frontend.git
+	    # ou via SSH
+	    git clone git@github.com:Projeto-Integrador-Univesp-2024/frontend.git
+    ```
+    
+---
+
+## **5. Executando a Aplicação**
+Após clonar os repositórios, siga as etapas abaixo para iniciar o ambiente:
+
+### **5.1. Navegar até o Diretório Docker**
+```bash
+	cd docker
+```
+### **5.2. Construir e Subir os Contêineres**
+Execute o comando:
+```bash
+	docker compose up --build -d
+```
+### **5.3. Verificar os Contêineres**
+Para verificar se os contêineres estão em execução:
+```bash
+	docker ps
+```
+
+---
+
+© 2025 Jornada na Educação Financeira Infantil. Todos os direitos reservados.
