@@ -69,9 +69,9 @@ Clone os repositórios usando **HTTP** ou **SSH**:
     ``` 
 -   **Frontend**:
     ```bash
-	    git clone https://github.com/Projeto-Integrador-Univesp-2024/frontend.git
+	    git clone https://github.com/Projeto-Integrador-Univesp-2024/client.git
 	    # ou via SSH
-	    git clone git@github.com:Projeto-Integrador-Univesp-2024/frontend.git
+	    git clone git@github.com:Projeto-Integrador-Univesp-2024/client.git
     ```
     
 ---
